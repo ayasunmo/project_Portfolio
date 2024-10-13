@@ -1,0 +1,246 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2b2b2b, #121212);
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.header {
+    max-width: 1900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: #1c1c1c;
+}
+
+.header_logo img {
+    width: 300px;
+    height: auto;
+}
+
+.header_burger{
+    display: none;
+}
+
+.header_burger img {
+    width: 100%;  
+    height: auto; 
+}
+
+.header_nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+}
+
+.header_nav li a {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.header_nav li a:hover {
+    background-color: #f0e68c;
+    color: black;
+}
+
+.contact_cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.contact_text {
+    color: #f0e68c;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 100px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    max-width: 1680px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px #f0e68c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.card img.icon {
+    width: 90px;
+    height: 90px;
+    transition: opacity 0.3s ease;
+}
+
+.card .details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card .details img.qr_code {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+}
+
+.card .details p {
+    margin: 0;
+    font-size: 18px;
+    color: black;
+}
+
+.card .details .info {
+    font-weight: bold;
+}
+
+.card:hover {
+    background-color: #f0e68c;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px #f0e68c;
+}
+
+.card:hover img.icon {
+    opacity: 0;
+}
+
+.card:hover .details {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.footer {
+    background-color: #1c1c1c;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer_content {
+    max-width: 1680px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer_map {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer_info {
+    flex: 2;
+    text-align: center;
+}
+
+.footer_info p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.social_links {
+    margin-top: 10px;
+}
+
+.social_links a {
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social_links a:hover {
+    transform: scale(1.2);
+}
+
+@media(max-width: 1250px) {
+    .header_logo {
+        display: none;
+    }
+}
+
+@media(max-width: 890px) {
+    .header_nav {
+        display: none;
+    }
+    
+    .header_logo {
+        display: flex;
+        width: 200px;
+        height: 50px;
+    }
+    
+    .header_burger {
+        display: flex;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media(max-width: 570px) {
+    .contact_text {
+        font-size: 28px;
+        padding: 0 10px;
+    }
+    
+    .header_logo {
+        display: flex;
+        width: 150px;
+        height: 40px;
+    }
+    
+    .header_burger {
+        width: 40px;  
+        height: auto;
+    }
+
+    .footer_map img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .footer_info p {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,227 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2b2b2b, #121212);
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.header {
+    max-width: 1900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: #1c1c1c;
+}
+
+.header_logo img {
+    width: 300px;
+    height: auto;
+}
+
+.header_burger{
+    display: none;
+}
+
+.header_burger img {
+    width: 100%;  
+    height: auto; 
+}
+
+.header_nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+}
+
+.header_nav li a {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.header_nav li a:hover {
+    background-color: #f0e68c;
+    color: black;
+}
+
+.container {
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    align-items: center;
+}
+.hobby_text{
+    color: #f0e68c;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.hobby_img{
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.5);
+}
+.hobby_info{
+    width: 600px;
+    height: 200px;
+    font-size: 22px;
+    font-weight: 10;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.arrow-left{
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	transform: translateY(-50%) rotate(180deg);
+}
+.arrow-right{
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	transform: translateY(-50%);
+} 
+.dots{
+	display: flex;
+	gap: 10px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 30px;
+}
+.dot{
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+	opacity: 0.2;
+}
+.dot.active{
+	opacity: 1;
+    background:  #f0e68c;
+}
+
+.hobby_gallery {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    flex-direction: column;
+}
+.hobby_gallery-top{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.hobby_gallery-bottom{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.hobby_gallery img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    box-shadow:0 4px 10px #f0e68c;
+    border-radius: 15px;
+}
+
+.hobby_gallery img:hover {
+    transform: scale(1.1);
+}
+
+@media(max-width:1250px) {
+    .header_logo {
+        display: none;
+    }
+}
+
+@media(max-width:890px) {
+    .header_nav{
+        display: none;
+    }
+    .header_logo{
+        display: flex;
+        width: 200px;
+        height: 50px;
+    }
+    .header_burger{
+        display: flex;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 1315px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 810px) {
+    .hobby_gallery img{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media(max-width: 685px){
+    .hobby_info{
+        width: auto;
+        height: auto;
+        font-size: 20px;
+    }
+}
+
+@media(max-width:495px) {
+    .header_logo {
+        display: flex;
+        width: 150px;
+        height: 40px;
+    }
+    .header_burger {
+        width: 40px;  
+        height: auto;
+    }    
+    .hobby_gallery img{
+        width: 180px;
+        height: 180px;
+    }
+    .hobby_text{
+        font-size: 35px;
+    }
+    .hobby_info{
+        margin-top: 25px;
+    }
+}
+
